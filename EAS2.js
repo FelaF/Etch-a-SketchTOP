@@ -1,4 +1,5 @@
- const container = document.querySelector("#container")
+const container = document.querySelector("#container")
+const Divs = document.querySelectorAll("#container")
 
 
 
@@ -8,9 +9,9 @@ function divIODiv(x){
         div.setAttribute("id", i)
         div.textContent = i;
         container.appendChild(div)
-        for (let j = 1; j < x; ++j){
+        for (let j = 1; j < x+1; ++j){
             const secondarydiv = document.createElement("div");
-            secondarydiv.classList = ("Secondary")
+            secondarydiv.classList.add("Secondary")
             secondarydiv.textContent = i;
             div.appendChild(secondarydiv)
         };
@@ -21,11 +22,15 @@ function divIODiv(x){
 divIODiv(8)
 
 function setFlex(){
-    container.style.color = "blue";
     container.style.display = "flex";
+    container.style.color = "blue";
 }
 setFlex()
-container.addEventListener("mouseover", ()=>{
-    console.log("mouse went over container")
-    container.style.color = "red";
-})
+
+Divs.forEach((div) => {
+    div.addEventListener("mouseover", ()=> {
+        console.log(div.id)
+    });
+});
+
+
