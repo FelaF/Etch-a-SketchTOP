@@ -4,7 +4,6 @@ const button = document.querySelector("#Input")
 
 
 function divIODiv(x){
-    LastValue = x
     for(let i = 0; i < x; i++){
         const div = document.createElement("div");
         div.setAttribute("id", "Primary")
@@ -19,17 +18,11 @@ function divIODiv(x){
     };
 
 divIODiv(8)
-container.innerHTML = ""
-divIODiv(12)
-container.removeAllChildren;
 function setFlex(){
     container.style.display = "flex";
 }
 setFlex()
 
-function Hovering(){
-    console.log("Hovering")
-}
 
 let SingularNodes = document.querySelectorAll("#container > div > div")
 SingularNodes.forEach((div) => {
@@ -39,9 +32,16 @@ SingularNodes.forEach((div) => {
     });
 });
 
-function Prompt(){
-    input = prompt("What is the new size of grid? (up to 100)")
-    container.innerHTML = ""
-    divIODiv(input)
+function Promption(){
+    input = Number(prompt("What is the new size of grid? (up to 100)"))
+    container.textContent = ""
+    divIODiv(inp)
 }
-button.addEventListener("click", Prompt);
+
+const Primary = document.querySelector("#Primary")
+const Secondary = document.querySelector(".Secondary")
+const garbage = Primary.removeChild(Secondary)
+SecondaryNodes = Primary.children
+console.log(garbage)
+const garbage1 = Primary.removeChild(SecondaryNodes)
+button.addEventListener("click", Promption);
