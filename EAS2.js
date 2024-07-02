@@ -15,33 +15,25 @@ function divIODiv(x){
             div.appendChild(secondarydiv)
         };
       };
+      container.style.display = "flex"
     };
 
 divIODiv(8)
-function setFlex(){
-    container.style.display = "flex";
-}
-setFlex()
+Input = prompt("What is the gridsize?")
 
 
 let SingularNodes = document.querySelectorAll("#container > div > div")
-SingularNodes.forEach((div) => {
-    div.addEventListener("mouseover", ()=> {
-        console.log(`The mouse went over ${ div.className}`)
-        div.style.background = "blue"
+
+SingularNodes.forEach((secondarydiv) => {
+    secondarydiv.addEventListener("mouseover", ()=> {
+        console.log(`The mouse went over ${ secondarydiv.className}`)
+       secondarydiv.style.background = "blue"
     });
 });
 
-function Promption(){
-    input = Number(prompt("What is the new size of grid? (up to 100)"))
-    container.textContent = ""
-    divIODiv(inp)
+function reactivateNodes(){
+    Nodes = document.querySelectorAll("#Container > div")
+    Cheese = container.removeChild(Nodes)
 }
-
-const Primary = document.querySelector("#Primary")
-const Secondary = document.querySelector(".Secondary")
-const garbage = Primary.removeChild(Secondary)
-SecondaryNodes = Primary.children
-console.log(garbage)
-const garbage1 = Primary.removeChild(SecondaryNodes)
-button.addEventListener("click", Promption);
+divIODiv
+reactivateNodes()
