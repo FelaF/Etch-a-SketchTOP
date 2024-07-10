@@ -16,6 +16,8 @@ function divIODiv(x){
         };
       };
       container.style.display = "flex"
+      container.style.height = 960
+      container.style.width = 960
     };
 
 divIODiv(8)
@@ -33,7 +35,10 @@ SingularNodes.forEach((secondarydiv) => {
 
 function reactivateNodes(){
     Nodes = document.querySelectorAll("#Container > div")
-    Cheese = container.removeChild(Nodes)
+    Divsize = 960/x;
+    console.log(Divsize)
+    secondarydiv.style.height = "Divsize%"
+    secondarydiv.style.width = "Divsize%"
+    Nodetion = container.removeChild(Nodes)
 }
-divIODiv
 reactivateNodes()
